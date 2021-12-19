@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Card.gd" type="Script" id=1]
+[ext_resource path="res://Card.png" type="Texture" id=2]
+[ext_resource path="res://AndadaPro-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Line.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+font_data = ExtResource( 3 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 40.1177, 64.0826 )
+
+[node name="Card" type="Area2D" groups=[
+"Cards",
+]]
+script = ExtResource( 1 )
+Line = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Sprite"]
+margin_left = -35.0
+margin_top = -58.0
+margin_right = 35.0
+margin_bottom = 58.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Lorem Ipsum testing haha hoho who who holymoly Lorem Ipsum testing haha hoho who who holymoly"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[connection signal="input_event" from="." to="." method="OnInputEvent"]
+[connection signal="mouse_entered" from="." to="." method="OnMouseEnter"]
+[connection signal="mouse_exited" from="." to="." method="OnMouseExit"]

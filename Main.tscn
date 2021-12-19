@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://Person.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Card.tscn" type="PackedScene" id=3]
+[ext_resource path="res://CardOrientation.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Line.tscn" type="PackedScene" id=5]
+[ext_resource path="res://CardSurface.tscn" type="PackedScene" id=6]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+Person = ExtResource( 2 )
+Card = ExtResource( 3 )
+CardOrientation = ExtResource( 4 )
+CardSurface = ExtResource( 6 )
+Line = ExtResource( 5 )
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 0, 525, 1280, 525 )
+default_color = Color( 0.415686, 0.482353, 0.921569, 1 )
+
+[node name="Info" type="Label" parent="."]
+margin_right = 383.0
+margin_bottom = 718.0
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam convallis felis aliquam, luctus neque id, vestibulum ante. Pellentesque tincidunt dapibus pulvinar. Quisque at sodales nunc. Curabitur venenatis lectus vel ipsum lobortis, id volutpat mauris ultricies. In interdum porttitor justo, a vehicula arcu. Vivamus metus lacus, finibus at ipsum semper, venenatis luctus dui. In non finibus ante. Vivamus congue ultrices eros, imperdiet consequat lectus fringilla sed. Nullam est leo, eleifend at arcu et, facilisis commodo nisi. Pellentesque vel suscipit lacus. Ut et pulvinar ipsum. Proin porta egestas lectus, et feugiat tortor maximus auctor. Proin ullamcorper auctor dolor, eget molestie nisl gravida vitae. Etiam accumsan malesuada augue eget malesuada.
+
+Proin laoreet libero ornare, placerat tortor eu, maximus velit. Curabitur tempus hendrerit felis, ut scelerisque nisi congue eu. Sed viverra elit tortor, et viverra risus tristique eleifend. Aliquam id velit massa. Integer nibh risus, aliquam ac turpis et, efficitur sodales lacus. Nam non tellus condimentum, dapibus ipsum vitae, suscipit mi. Morbi euismod tempor orci in tempus. Proin ligula augue, porttitor ut vehicula at, pretium non turpis. Aliquam nec ipsum vel justo efficitur ornare. Fusce varius arcu sit amet ante egestas, sed lobortis purus commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse diam ligula, aliquam sit amet efficitur ac, lacinia a mi. Morbi est turpis, fermentum ut tristique ac, luctus in diam.
+
+Pellentesque est orci, tempus a magna sit amet, finibus semper enim. Quisque cursus lorem ac placerat rhoncus. Donec scelerisque bibendum lorem a commodo. Vivamus viverra turpis malesuada, ultrices tellus et, tempor urna. Vestibulum quis nulla nunc. Curabitur a velit suscipit, dapibus massa id, varius dolor. Proin pretium, eros eu interdum faucibus, lacus erat mollis urna, at volutpat neque erat vel leo. Donec at sodales lectus, ut finibus orci. Cras viverra ligula nisl, nec volutpat elit aliquam ac. Aliquam egestas sed arcu ut volutpat. Vivamus nec imperdiet libero. Praesent venenatis, nisl non dignissim elementum, orci enim luctus ligula, sit amet porttitor risus sapien sed metus."
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
